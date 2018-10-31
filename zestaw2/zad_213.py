@@ -3,3 +3,5 @@ line = """raz dwa trzy
         """
 
 print("liczba liter: "+str(sum(len(word) for word in line.split())))
+
+print("liczba liter: "+str(sum([len(word) for word in line.split()])))
