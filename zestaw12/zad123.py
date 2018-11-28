@@ -20,11 +20,12 @@ def selectsort(L, left, right, cmpfunc=cmp):
     return L
 
 
-r = rg.RandomGen().rand(10)
+def mediana_sort(L, left, right):
+    selectsort(L, left, right)
+    return L[len(L) // 2]
+
+
+r = rg.RandomGen().rand(100)
 
 print(r)
-
-print(selectsort(r, 0, 9))
-r = rg.RandomGen().rand(10)
-print(r)
-print(selectsort(r, 0, 9, lambda x, y: int(x > y)))
+print(mediana_sort(r, 0, 99))
